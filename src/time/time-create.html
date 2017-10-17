@@ -1,0 +1,17 @@
+<form name="projectForm" data-ng-submit="ctrl.save(ctrl.project)">
+  <div class="row">
+    <div class="input-field col s12">
+      Tempo gasto
+      <input id="name" type="time" class="validate" data-ng-model="ctrl.time.time" data-ng-required="true">
+    </div>
+    <div class="input-field col s12">
+      Selecione uma cor:
+      <input id="color" type="color" data-ng-model="ctrl.project.color" />
+    </div>
+  </div>
+
+  <div class="row right">
+    <button class="waves-effect waves-light btn" type="submit" data-ng-disabled="projectForm.$invalid">
+      <i class="material-icons left">save</i>Salvar</button>
+  </div>
+</form>

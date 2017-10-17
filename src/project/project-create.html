@@ -1,0 +1,27 @@
+<div class="row">
+  <h4 class="left">Adicionar novo projeto</h4>
+  <i class="material-icons right" data-ui-sref="main">close</i>
+</div>
+<form name="projectForm" data-ng-submit="ctrl.save(ctrl.project)">
+  
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="name" type="text" class="validate" data-ng-model="ctrl.project.name" data-ng-required="true">
+      <label for="name">Nome</label>
+    </div>
+    <div class="input-field col s12">
+      Selecione uma cor:
+      <input id="color" type="color" data-ng-model="ctrl.project.color" />
+    </div>
+  </div>
+
+  <div class="row" data-ng-if="ctrl.project.name">
+    <h5>Pré visualização na listagem</h5>
+    <div class="chip white-text" style="background-color: {{ctrl.project.color}}">{{ctrl.project.name}}</div>
+  </div>
+
+  <div class="row right">
+    <button class="waves-effect waves-light btn" type="submit" data-ng-disabled="projectForm.$invalid">
+      <i class="material-icons left">save</i>Salvar</button>
+  </div>
+</form>
