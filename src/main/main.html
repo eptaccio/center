@@ -1,12 +1,10 @@
-<h3>Projetos</h3>
+<h1>Projetos</h1>
 
-<div class="row">
-  <div data-ng-repeat="project in ctrl.projects" class="chip white-text" style="background-color: {{project.color}}">
-    {{project.name}}
-    <i class="close material-icons">close</i>
-  </div>
-  <a class="right blue accent-4 btn" data-ui-sref="project">Adicionar</a>
-</div>
+<md-button class="md-raised" flex-gt-md="15" flex="30" style="background-color: {{project.color}}" data-ng-repeat="project in ctrl.projects">
+  <b>{{project.name}}</b>
+</md-button>
+
+<a class="right blue accent-4 btn" data-ui-sref="project">Adicionar</a>
 
 <ul class="collection">
 
@@ -14,6 +12,9 @@
 
 <div class="fixed-action-btn">
   <a class="btn-floating btn-large red" data-ui-sref="time">
-    <i class="large material-icons">alarm_add</i>
   </a>
 </div>
+
+<md-button class="md-fab md-warn md-fab-bottom-right" aria-label="Use Android">
+  <md-icon>alarm_add</md-icon>
+</md-button>
